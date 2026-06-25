@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --magma-black: #050403;
+  --magma-charcoal: #11100e;
+  --magma-orange: #ff6a00;
+  --magma-red: #c32616;
+  --magma-gold: #f5a623;
+  --magma-ember: #ff3b1f;
+  --magma-green: #0f6b3a;
+  --magma-cream: #fff4e2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--magma-black);
+  color: var(--magma-cream);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .heat-text {
+    background: linear-gradient(
+      92deg,
+      var(--magma-gold) 0%,
+      var(--magma-orange) 45%,
+      var(--magma-ember) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .ember-divider {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--magma-orange),
+      var(--magma-ember),
+      transparent
+    );
+  }
+  /* Dark overlay so text stays readable over photos. */
+  .photo-veil {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 4, 3, 0.35) 0%,
+      rgba(5, 4, 3, 0.55) 45%,
+      rgba(5, 4, 3, 0.92) 100%
+    );
+  }
+  .heat-veil {
+    background:
+      radial-gradient(
+        70% 55% at 50% 18%,
+        rgba(255, 106, 0, 0.28),
+        transparent 70%
+      ),
+      linear-gradient(180deg, rgba(5, 4, 3, 0.5), rgba(5, 4, 3, 0.96));
+  }
+  .grain {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px
+    );
+    background-size: 3px 3px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

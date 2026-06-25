@@ -1,0 +1,112 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import type { Locale } from "@/lib/locale";
+import { localizedPath } from "@/lib/locale";
+import type { Dictionary } from "@/i18n";
+import { magmaAssets } from "@/data/assets";
+import { whatsappLink } from "@/lib/whatsapp";
+import MagmaCanvasBackground from "@/components/ui/MagmaCanvasBackground";
+
+export default function HeroSection({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+}) {
+  return (
+    <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
+      {/* Background video with image poster fallback */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={magmaAssets.videos.heroPoster}
+      >
+        <source src={magmaAssets.videos.hero} type="video/mp4" />
+      </video>
+
+      <div className="absolute inset-0 heat-veil" />
+      <div className="absolute inset-0 grain opacity-60" />
+      <MagmaCanvasBackground className="opacity-80" intensity={1} />
+
+      <div className="relative z-10 flex flex-col items-center px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        >
+          <Image
+            src={magmaAssets.logos.whiteOnBlack}
+            alt="MAGMA — Churrascaria, Steakhouse & American Bar"
+            width={520}
+            height={220}
+            priority
+            className="mx-auto w-[min(82vw,460px)] rounded-xl object-contain shadow-ember"
+          />
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="mt-8 font-display text-5xl leading-[0.95] tracking-wide sm:text-7xl md:text-8xl"
+        >
+          <span className="block text-magma-cream">{dict.home.hero.line1}</span>
+          <span className="block heat-text">{dict.home.hero.line2}</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-5 max-w-xl text-balance text-base text-magma-cream/85 sm:text-lg"
+        >
+          {dict.home.hero.subtitle}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.65 }}
+          className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
+        >
+          <a
+            href={whatsappLink("reservation")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-full bg-magma-orange px-7 py-3 text-center font-heading text-sm uppercase tracking-widest text-magma-black shadow-ember transition hover:scale-[1.03] active:scale-95 sm:w-auto"
+          >
+            {dict.common.book}
+          </a>
+          <a
+            href={localizedPath(locale, "/menu")}
+            className="w-full rounded-full border border-magma-cream/40 px-7 py-3 text-center font-heading text-sm uppercase tracking-widest text-magma-cream transition hover:border-magma-orange hover:text-magma-orange sm:w-auto"
+          >
+            {dict.common.viewMenu}
+          </a>
+          <a
+            href={localizedPath(locale, "/events")}
+            className="w-full rounded-full border border-magma-cream/40 px-7 py-3 text-center font-heading text-sm uppercase tracking-widest text-magma-cream transition hover:border-magma-orange hover:text-magma-orange sm:w-auto"
+          >
+            {dict.common.events}
+          </a>
+        </motion.div>
+      </div>
+
+      <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2">
+        <div className="h-10 w-6 rounded-full border border-magma-cream/30 p-1">
+          <motion.div
+            animate={{ y: [0, 14, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            className="mx-auto h-2 w-1 rounded-full bg-magma-orange"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
