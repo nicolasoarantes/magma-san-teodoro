@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import type { Locale } from "@/lib/locale";
 import { localizedPath } from "@/lib/locale";
 import type { Dictionary } from "@/i18n";
-import { whatsappLink } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 import MagmaCanvasBackground from "@/components/ui/MagmaCanvasBackground";
 
 export default function FinalCTA({
@@ -32,7 +32,7 @@ export default function FinalCTA({
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href={whatsappLink("reservation")}
+            href={waLink(dict.wa.reservation)}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full rounded-full bg-magma-orange px-8 py-3.5 text-center font-heading text-sm uppercase tracking-widest text-magma-black shadow-ember transition hover:scale-[1.03] sm:w-auto"

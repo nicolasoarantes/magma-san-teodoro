@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Dictionary } from "@/i18n";
 import { magmaAssets } from "@/data/assets";
-import { whatsappLink } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 import MagmaCanvasBackground from "@/components/ui/MagmaCanvasBackground";
 
 export default function EventsHero({ dict }: { dict: Dictionary }) {
@@ -44,7 +44,7 @@ export default function EventsHero({ dict }: { dict: Dictionary }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
-          href={whatsappLink("event")}
+          href={waLink(dict.wa.event)}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-block rounded-full bg-magma-orange px-8 py-3.5 font-heading text-sm uppercase tracking-widest text-magma-black shadow-ember transition hover:scale-[1.03]"

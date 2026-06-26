@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { Dictionary } from "@/i18n";
-import { whatsappLink } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 import MagmaCanvasBackground from "@/components/ui/MagmaCanvasBackground";
 
 export default function EventsCTA({ dict }: { dict: Dictionary }) {
@@ -23,7 +23,7 @@ export default function EventsCTA({ dict }: { dict: Dictionary }) {
           {dict.events.cta.copy}
         </p>
         <a
-          href={whatsappLink("event")}
+          href={waLink(dict.wa.event)}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-9 inline-block rounded-full bg-magma-orange px-8 py-3.5 font-heading text-sm uppercase tracking-widest text-magma-black shadow-ember transition hover:scale-[1.03]"

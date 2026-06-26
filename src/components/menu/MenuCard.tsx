@@ -1,7 +1,16 @@
+import type { Locale } from "@/lib/locale";
 import type { MenuItem } from "@/data/menu";
 import { formatPrice } from "@/lib/menu-normalizer";
+import { describe } from "@/data/menu-i18n";
 
-export default function MenuCard({ item }: { item: MenuItem }) {
+export default function MenuCard({
+  item,
+  locale,
+}: {
+  item: MenuItem;
+  locale: Locale;
+}) {
+  const description = describe(item.description, locale);
   return (
     <div className="flex items-start justify-between gap-4 rounded-xl border border-white/10 bg-magma-charcoal/70 p-4 transition hover:border-magma-orange/40">
       <div className="min-w-0">
@@ -13,9 +22,9 @@ export default function MenuCard({ item }: { item: MenuItem }) {
             </span>
           )}
         </h4>
-        {item.description && (
+        {description && (
           <p className="mt-1 text-sm leading-snug text-magma-cream/60">
-            {item.description}
+            {description}
           </p>
         )}
       </div>

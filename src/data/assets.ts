@@ -31,6 +31,8 @@ export const magmaAssets = {
     bottles: `${BASE}/fotos/bar-bottles.jpg`,
     // Meat over open flame — churrasco / fire.
     churrasco: `${BASE}/fotos/churrasco-fire.jpg`,
+    // High-res plated steak dinner — steakhouse / food feature.
+    steak: `${BASE}/fotos/steak-dinner.jpg`,
     // "New opening" fire close-up.
     fire: `${BASE}/fotos/new-opening-fire.jpg`,
     // "Every day is a Latin day" — dancing silhouettes.

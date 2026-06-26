@@ -14,6 +14,12 @@ const it: Dictionary = {
       "Rodízio, tagli da steakhouse, cocktail brasiliani, vini e molto altro. Scopri il menu completo del Magma.",
   },
   nav: { home: "Home", events: "Eventi", menu: "Menu", whatsapp: "WhatsApp" },
+  wa: {
+    reservation: "Ciao Magma, vorrei prenotare un tavolo.",
+    event:
+      "Ciao Magma, vorrei organizzare un evento. Data: __ Ospiti: __ Tipo di evento: __",
+    menu: "Ciao Magma, ho una domanda sul menu.",
+  },
   common: {
     book: "Prenota su WhatsApp",
     viewMenu: "Vedi il Menu",
@@ -24,6 +30,7 @@ const it: Dictionary = {
     whatsapp: "WhatsApp",
     pastEvent: "Evento passato",
     language: "Lingua",
+    swipe: "scorri",
   },
   home: {
     hero: {

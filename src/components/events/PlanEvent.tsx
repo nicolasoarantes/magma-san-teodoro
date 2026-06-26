@@ -55,7 +55,7 @@ export default function PlanEvent({ dict }: { dict: Dictionary }) {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="no-scrollbar -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
           {dict.events.plan.cards.map((card, i) => (
             <motion.div
               key={card}
@@ -63,7 +63,7 @@ export default function PlanEvent({ dict }: { dict: Dictionary }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.07 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-magma-black/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-magma-orange/60 hover:shadow-ember sm:p-7"
+              className="group relative w-[80%] flex-none snap-center overflow-hidden rounded-2xl border border-white/10 bg-magma-black/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-magma-orange/60 hover:shadow-ember sm:w-auto sm:p-7"
             >
               {/* hover glow */}
               <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-magma-orange/0 blur-2xl transition-all duration-500 group-hover:bg-magma-orange/20" />

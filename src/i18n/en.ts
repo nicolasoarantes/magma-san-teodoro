@@ -12,6 +12,12 @@ const en = {
       "Rodízio, steakhouse cuts, Brazilian cocktails, wines and more. Explore the full Magma menu.",
   },
   nav: { home: "Home", events: "Events", menu: "Menu", whatsapp: "WhatsApp" },
+  wa: {
+    reservation: "Hi Magma, I'd like to make a reservation.",
+    event:
+      "Hi Magma, I'd like to plan an event. Date: __ Guests: __ Type of event: __",
+    menu: "Hi Magma, I have a question about the menu.",
+  },
   common: {
     book: "Book on WhatsApp",
     viewMenu: "View Menu",
@@ -22,6 +28,7 @@ const en = {
     whatsapp: "WhatsApp",
     pastEvent: "Past event",
     language: "Language",
+    swipe: "swipe",
   },
   home: {
     hero: {

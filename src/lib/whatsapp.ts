@@ -24,3 +24,8 @@ export function whatsappLink(
   const text = encodeURIComponent(customMessage ?? MESSAGES[context]);
   return `https://wa.me/${whatsappNumber()}?text=${text}`;
 }
+
+/** Build a WhatsApp link from an already-localized message string. */
+export function waLink(message: string): string {
+  return `https://wa.me/${whatsappNumber()}?text=${encodeURIComponent(message)}`;
+}

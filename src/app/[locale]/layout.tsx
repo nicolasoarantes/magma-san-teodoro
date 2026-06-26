@@ -80,7 +80,7 @@ export default function LocaleLayout({
       <Header locale={locale} dict={dict} />
       <main>{children}</main>
       <Footer locale={locale} dict={dict} />
-      <WhatsAppButton context="reservation" label={dict.common.book} />
+      <WhatsAppButton message={dict.wa.reservation} label={dict.common.book} />
     </>
   );
 }

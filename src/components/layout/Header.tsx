@@ -9,7 +9,7 @@ import type { Locale } from "@/lib/locale";
 import { localizedPath } from "@/lib/locale";
 import type { Dictionary } from "@/i18n";
 import { magmaAssets } from "@/data/assets";
-import { whatsappLink } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 import LanguageSwitcher from "./LanguageSwitcher";
 import MobileMenu from "./MobileMenu";
 
@@ -89,7 +89,7 @@ export default function Header({
               </Link>
             ))}
             <a
-              href={whatsappLink("reservation")}
+              href={waLink(dict.wa.reservation)}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-magma-orange/70 px-4 py-1.5 font-heading text-xs uppercase tracking-widest text-magma-orange transition hover:bg-magma-orange hover:text-magma-black"
@@ -99,17 +99,20 @@ export default function Header({
             <LanguageSwitcher locale={locale} label={dict.common.language} />
           </div>
 
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="relative z-10 flex h-10 w-10 items-center justify-center md:hidden"
-            aria-label="Open menu"
-          >
-            <span className="flex flex-col gap-1.5">
-              <span className="block h-0.5 w-6 bg-magma-cream" />
-              <span className="block h-0.5 w-6 bg-magma-cream" />
-              <span className="block h-0.5 w-4 bg-magma-orange" />
-            </span>
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher locale={locale} label={dict.common.language} />
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="relative z-10 flex h-10 w-9 items-center justify-center"
+              aria-label="Open menu"
+            >
+              <span className="flex flex-col gap-1.5">
+                <span className="block h-0.5 w-6 bg-magma-cream" />
+                <span className="block h-0.5 w-6 bg-magma-cream" />
+                <span className="block h-0.5 w-4 bg-magma-orange" />
+              </span>
+            </button>
+          </div>
         </nav>
       </motion.header>
 

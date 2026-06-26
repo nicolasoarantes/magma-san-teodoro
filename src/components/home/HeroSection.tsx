@@ -6,7 +6,7 @@ import type { Locale } from "@/lib/locale";
 import { localizedPath } from "@/lib/locale";
 import type { Dictionary } from "@/i18n";
 import { magmaAssets } from "@/data/assets";
-import { whatsappLink } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 import MagmaCanvasBackground from "@/components/ui/MagmaCanvasBackground";
 
 export default function HeroSection({
@@ -76,7 +76,7 @@ export default function HeroSection({
           className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
         >
           <a
-            href={whatsappLink("reservation")}
+            href={waLink(dict.wa.reservation)}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full rounded-full bg-magma-orange px-7 py-3 text-center font-heading text-sm uppercase tracking-widest text-magma-black shadow-ember transition hover:scale-[1.03] active:scale-95 sm:w-auto"

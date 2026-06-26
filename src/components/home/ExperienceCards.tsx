@@ -28,7 +28,7 @@ export default function ExperienceCards({ dict }: { dict: Dictionary }) {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="no-scrollbar -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 lg:grid-cols-4">
           {cards.map((card, i) => (
             <motion.article
               key={card.title}
@@ -36,7 +36,7 @@ export default function ExperienceCards({ dict }: { dict: Dictionary }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group relative h-72 overflow-hidden rounded-2xl border border-white/10"
+              className="group relative h-72 w-[78%] flex-none snap-center overflow-hidden rounded-2xl border border-white/10 sm:w-auto"
             >
               <Image
                 src={images[i]}

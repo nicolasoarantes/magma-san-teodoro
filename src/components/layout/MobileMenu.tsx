@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Locale } from "@/lib/locale";
 import type { Dictionary } from "@/i18n";
-import { whatsappLink } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function MobileMenu({
@@ -60,7 +60,7 @@ export default function MobileMenu({
 
         <div className="mt-auto mb-10 flex flex-col gap-5">
           <a
-            href={whatsappLink("reservation")}
+            href={waLink(dict.wa.reservation)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-magma-orange px-6 py-3 text-center font-heading text-sm uppercase tracking-widest text-magma-black"

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Dictionary } from "@/i18n";
 import { magmaAssets } from "@/data/assets";
-import { whatsappLink } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 
 const ADDRESS = "Via San Francesco d'Assisi 15, San Teodoro (SS)";
 const MAPS_URL =
@@ -20,11 +20,13 @@ export default function VisitSection({ dict }: { dict: Dictionary }) {
         src={magmaAssets.photos.facade}
         alt="MAGMA facade in San Teodoro at night"
         fill
-        quality={90}
+        quality={92}
         sizes="100vw"
-        className="object-cover"
+        className="scale-110 object-cover blur-[3px]"
       />
+      <div className="absolute inset-0 bg-magma-black/55" />
       <div className="absolute inset-0 photo-veil" />
+      <div className="grain absolute inset-0 opacity-30" />
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -53,7 +55,7 @@ export default function VisitSection({ dict }: { dict: Dictionary }) {
               {dict.common.openMaps}
             </a>
             <a
-              href={whatsappLink("reservation")}
+              href={waLink(dict.wa.reservation)}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full rounded-full border border-magma-cream/40 px-7 py-3 text-center font-heading text-sm uppercase tracking-widest text-magma-cream transition hover:border-magma-orange hover:text-magma-orange sm:w-auto"

@@ -1,38 +1,41 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { Locale } from "@/lib/locale";
 import type { Dictionary } from "@/i18n";
 import type { MenuItem } from "@/data/menu";
 import { groupItems, matchesQuery } from "@/lib/menu-normalizer";
+import { categoryLabel, subcategoryLabel } from "@/data/menu-i18n";
 import MenuFilters from "./MenuFilters";
 import MenuCard from "./MenuCard";
+
+const ALL = "__all__";
 
 export default function MenuClient({
   dict,
   items,
   categories,
+  locale,
 }: {
   dict: Dictionary;
   items: MenuItem[];
   categories: string[];
+  locale: Locale;
 }) {
-  const allLabel = dict.menu.all;
-  const [active, setActive] = useState(allLabel);
+  const [active, setActive] = useState(ALL);
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
     return items.filter(
       (it) =>
-        (active === allLabel || it.category === active) &&
-        matchesQuery(it, query),
+        (active === ALL || it.category === active) && matchesQuery(it, query),
     );
-  }, [items, active, query, allLabel]);
+  }, [items, active, query]);
 
   const groups = useMemo(() => groupItems(filtered), [filtered]);
 
   return (
     <section className="bg-magma-black pb-20">
-      {/* Sticky controls under the header */}
       <div className="sticky top-16 z-30 border-b border-white/5 bg-magma-black/90 backdrop-blur-md">
         <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6">
           <div className="relative mb-3">
@@ -48,7 +51,9 @@ export default function MenuClient({
             categories={categories}
             active={active}
             onChange={setActive}
-            allLabel={allLabel}
+            allValue={ALL}
+            allLabel={dict.menu.all}
+            locale={locale}
           />
         </div>
       </div>
@@ -62,7 +67,7 @@ export default function MenuClient({
           <div key={group.category} className="mb-12">
             <div className="mb-5 flex items-baseline gap-4">
               <h2 className="font-display text-3xl tracking-wide text-magma-orange sm:text-4xl">
-                {group.category}
+                {categoryLabel(group.category, locale)}
               </h2>
               <span className="h-px flex-1 ember-divider opacity-50" />
             </div>
@@ -71,12 +76,12 @@ export default function MenuClient({
               <div key={sub.subcategory ?? "_"} className="mb-6">
                 {sub.subcategory && (
                   <h3 className="mb-3 font-heading text-sm uppercase tracking-[0.25em] text-magma-gold">
-                    {sub.subcategory}
+                    {subcategoryLabel(sub.subcategory, locale)}
                   </h3>
                 )}
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                   {sub.items.map((item, i) => (
-                    <MenuCard key={item.name + i} item={item} />
+                    <MenuCard key={item.name + i} item={item} locale={locale} />
                   ))}
                 </div>
               </div>

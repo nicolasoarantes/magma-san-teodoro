@@ -1,6 +1,6 @@
 "use client";
 
-import { whatsappLink, type WhatsAppContext } from "@/lib/whatsapp";
+import { waLink } from "@/lib/whatsapp";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -11,15 +11,15 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export default function WhatsAppButton({
-  context = "reservation",
+  message,
   label,
 }: {
-  context?: WhatsAppContext;
+  message: string;
   label?: string;
 }) {
   return (
     <a
-      href={whatsappLink(context)}
+      href={waLink(message)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label || "WhatsApp"}

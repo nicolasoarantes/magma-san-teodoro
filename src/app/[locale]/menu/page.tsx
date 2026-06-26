@@ -30,7 +30,7 @@ export default function MenuPage({ params }: { params: { locale: string } }) {
   return (
     <>
       <MenuHero dict={dict} />
-      <MenuClient dict={dict} items={menuItems} categories={menuCategories} />
+      <MenuClient dict={dict} items={menuItems} categories={menuCategories} locale={locale} />
       <DownloadMenuBlock dict={dict} />
     </>
   );

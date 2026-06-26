@@ -19,8 +19,8 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       <ExperienceCards dict={dict} />
 
       <FeatureBlock
-        image={magmaAssets.photos.churrasco}
-        imageAlt="Brazilian churrasco over open fire at MAGMA"
+        image={magmaAssets.photos.steak}
+        imageAlt="Steakhouse cut served at MAGMA in San Teodoro"
         kicker={dict.home.food.kicker}
         title={dict.home.food.title}
         copy={dict.home.food.copy}
