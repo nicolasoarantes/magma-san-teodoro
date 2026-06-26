@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { Dictionary } from "@/i18n";
+import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function MenuHero({ dict }: { dict: Dictionary }) {
   return (
@@ -19,6 +20,7 @@ export default function MenuHero({ dict }: { dict: Dictionary }) {
         <p className="mt-3 font-heading text-xs uppercase tracking-[0.3em] text-magma-cream/60 sm:text-sm">
           {dict.menu.subtitle}
         </p>
+        <SocialLinks className="mt-6" />
       </div>
     </section>
   );
