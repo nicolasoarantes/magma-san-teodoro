@@ -8,8 +8,8 @@ export const magmaAssets = {
   logos: {
     // Clean white wordmark with transparent background — used in the header.
     header: `${BASE}/logos/header-logo.png`,
-    // Fire-coloured wordmark, transparent background.
-    wordmarkFire: `${BASE}/logos/wordmark-fire.png`,
+    // White wordmark, reused in the poster section.
+    wordmarkFire: `${BASE}/logos/header-logo.png`,
     // Logo on its own fire background (best on dark hero blocks).
     fire: `${BASE}/logos/logo-fogo.jpg`,
     // White wordmark (transparent-looking on dark, but has its own bg).

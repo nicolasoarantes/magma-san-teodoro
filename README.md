@@ -43,7 +43,7 @@ Todos os ativos reais ficam em `public/assets/magma/` e são mapeados em **`src/
 | O que trocar | Onde |
 |---|---|
 | **Fotos** | substitua os arquivos em `public/assets/magma/fotos/` mantendo o nome, ou edite os caminhos em `src/data/assets.ts`. |
-| **Logo** | arquivos em `public/assets/magma/logos/`. O header/footer usam `logo-branca.jpg`; o hero usa `logo-branca-fundo-preto.jpg`. Troque em `src/data/assets.ts`. |
+| **Logo** | arquivos em `public/assets/magma/logos/`. Header/footer e a seção de poster usam `header-logo.png`; o hero usa `logo-branca-fundo-preto.jpg`. Troque em `src/data/assets.ts`. |
 | **Vídeo do hero** | `public/assets/magma/videos/hero.mp4` (+ `hero-poster.jpg` como capa). |
 | **WhatsApp** | variável `NEXT_PUBLIC_WHATSAPP_NUMBER`. As mensagens prontas estão em `src/lib/whatsapp.ts`. |
 | **Endereço / telefone** | `src/i18n/en.ts` (e `it.ts`, `pt.ts`), campo `home.visit`; e o rodapé em `src/components/layout/Footer.tsx`. |

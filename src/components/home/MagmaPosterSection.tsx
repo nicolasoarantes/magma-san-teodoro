@@ -35,9 +35,16 @@ export default function MagmaPosterSection({ dict }: { dict: Dictionary }) {
             {dict.home.poster.tag}
           </p>
 
-          <h2 className="mt-3 text-center font-display text-7xl leading-none tracking-wide sm:text-8xl md:text-9xl">
-            <span className="heat-text">MAGMA</span>
-          </h2>
+          <div className="mx-auto mt-3 w-full" style={{ maxWidth: 560 }}>
+            <Image
+              src={magmaAssets.logos.wordmarkFire}
+              alt="MAGMA"
+              width={640}
+              height={145}
+              style={{ width: "100%", height: "auto" }}
+              className="h-auto w-full object-contain drop-shadow-[0_0_18px_rgba(255,106,0,0.2)]"
+            />
+          </div>
 
           <div className="mx-auto mt-3 h-px w-40 ember-divider" />
 
