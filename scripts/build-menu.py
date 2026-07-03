@@ -10,7 +10,10 @@ import openpyxl
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, "cardapio.xlsx")
 TS_OUT = os.path.join(ROOT, "src", "data", "menu.ts")
-PDF_OUT = os.path.join(ROOT, "public", "menu", "magma-menu.pdf")
+# NOTE: the site serves the official PDF at public/menu/magma-menu.pdf.
+# To avoid overwriting it, this script writes its auto-generated PDF to a
+# separate file. Only src/data/menu.ts (the data) is the critical output.
+PDF_OUT = os.path.join(ROOT, "public", "menu", "magma-menu-generated.pdf")
 QR_OUT = os.path.join(ROOT, "public", "menu", "qr-menu.png")
 SITE_MENU_URL = "https://magma-san-teodoro.vercel.app/menu"  # TODO: ajuste para o domínio real
 
