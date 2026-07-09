@@ -39,14 +39,15 @@ export default function HeroSection({
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
+          className="relative px-4 py-4 before:absolute before:inset-x-0 before:top-1/2 before:z-0 before:h-44 before:-translate-y-1/2 before:rounded-full before:bg-[radial-gradient(ellipse_at_center,rgba(5,4,3,0.76),rgba(5,4,3,0.42)_48%,transparent_76%)] before:blur-2xl before:content-[''] sm:px-8 sm:py-6"
         >
           <Image
-            src={magmaAssets.logos.whiteOnBlack}
+            src={magmaAssets.logos.whiteCompleteTransparent}
             alt="MAGMA — Churrascaria, Steakhouse & American Bar"
-            width={520}
-            height={220}
+            width={1594}
+            height={672}
             priority
-            className="mx-auto w-[min(82vw,460px)] rounded-xl object-contain shadow-ember"
+            className="relative z-10 mx-auto h-auto w-[min(84vw,520px)] object-contain drop-shadow-[0_10px_26px_rgba(0,0,0,0.88)]"
           />
         </motion.div>
 

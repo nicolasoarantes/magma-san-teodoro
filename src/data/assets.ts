@@ -16,6 +16,8 @@ export const magmaAssets = {
     white: `${BASE}/logos/logo-branca.jpg`,
     // White wordmark on solid black — safest for dark sections.
     whiteOnBlack: `${BASE}/logos/logo-branca-fundo-preto.jpg`,
+    // Complete white logo with subtitle and ornaments, transparent background.
+    whiteCompleteTransparent: `${BASE}/logos/logo-branca-completa-transparente.png`,
     black: `${BASE}/logos/logo-preta.jpg`,
     plain: `${BASE}/logos/logo.jpg`,
     blackPdf: `${BASE}/logos/logo-preta.pdf`,
