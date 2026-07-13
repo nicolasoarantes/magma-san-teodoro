@@ -54,7 +54,6 @@ export const magmaAssets = {
   },
   videos: {
     hero: `${BASE}/videos/hero.mp4`,
-    heroPoster: `${BASE}/videos/hero-poster.jpg`,
     immersive: `${BASE}/videos/immersive.mp4`,
   },
   menu: {

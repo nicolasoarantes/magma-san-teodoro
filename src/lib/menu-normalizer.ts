@@ -5,14 +5,14 @@ export interface MenuGroup {
   subgroups: { subcategory: string | null; items: MenuItem[] }[];
 }
 
-/** Format a price + unit, e.g. "€ 40 /persona", "€ 100 /kg", "€ 12". */
+/** Format a price + unit, e.g. "40 € / persona", "90 € / kg", "12 €". */
 export function formatPrice(item: MenuItem): string {
   if (item.price === null) return "";
   const value = Number.isInteger(item.price)
     ? String(item.price)
-    : item.price.toFixed(2).replace(/0$/, "");
-  const extra = (item.unit || "€").replace("€", "").trim();
-  return `€ ${value}${extra ? ` ${extra}` : ""}`;
+    : item.price.toFixed(2).replace(/0$/, "").replace(".", ",");
+  const extra = (item.unit || "€").replace("€", "").replace("/", "").trim();
+  return `${value} €${extra ? ` / ${extra}` : ""}`;
 }
 
 /** Group a flat item list by category, then subcategory, preserving order. */

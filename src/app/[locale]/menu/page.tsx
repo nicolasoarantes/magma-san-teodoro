@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { isLocale, defaultLocale, type Locale } from "@/lib/locale";
 import { getDictionary } from "@/i18n";
-import { menuItems, menuCategories } from "@/data/menu";
+import { publicMenuItems, menuCategories } from "@/data/menu";
 import MenuHero from "@/components/menu/MenuHero";
 import MenuClient from "@/components/menu/MenuClient";
 import DownloadMenuBlock from "@/components/menu/DownloadMenuBlock";
@@ -30,7 +30,7 @@ export default function MenuPage({ params }: { params: { locale: string } }) {
   return (
     <>
       <MenuHero dict={dict} />
-      <MenuClient dict={dict} items={menuItems} categories={menuCategories} locale={locale} />
+      <MenuClient dict={dict} items={publicMenuItems} categories={menuCategories} locale={locale} />
       <DownloadMenuBlock dict={dict} />
     </>
   );

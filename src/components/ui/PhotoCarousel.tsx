@@ -16,7 +16,7 @@ export default function PhotoCarousel({
   aspect?: string;
 }) {
   return (
-    <div className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:px-6">
+    <div className="horizontal-carousel no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:px-6">
       {photos.map((src, i) => (
         <div
           key={src + i}

@@ -5,7 +5,7 @@ import type { Locale } from "@/lib/locale";
 import type { Dictionary } from "@/i18n";
 import type { MenuItem } from "@/data/menu";
 import { groupItems, matchesQuery } from "@/lib/menu-normalizer";
-import { categoryLabel, subcategoryLabel } from "@/data/menu-i18n";
+import { categoryIntro, categoryLabel, subcategoryLabel } from "@/data/menu-i18n";
 import MenuFilters from "./MenuFilters";
 import MenuCard from "./MenuCard";
 
@@ -71,6 +71,11 @@ export default function MenuClient({
               </h2>
               <span className="h-px flex-1 ember-divider opacity-50" />
             </div>
+            {categoryIntro(group.category, locale) && (
+              <p className="mb-6 max-w-3xl text-sm leading-relaxed text-magma-cream/65">
+                {categoryIntro(group.category, locale)}
+              </p>
+            )}
 
             {group.subgroups.map((sub) => (
               <div key={sub.subcategory ?? "_"} className="mb-6">

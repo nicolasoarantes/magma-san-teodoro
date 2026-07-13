@@ -18,14 +18,13 @@ export default function HeroSection({
 }) {
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
-      {/* Background video with image poster fallback */}
+      {/* Background video. Avoid a stale poster frame before playback starts. */}
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full bg-magma-black object-cover"
         autoPlay
         muted
         loop
         playsInline
-        poster={magmaAssets.videos.heroPoster}
       >
         <source src={magmaAssets.videos.hero} type="video/mp4" />
       </video>

@@ -80,6 +80,18 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  @media (max-width: 639px) {
+    .horizontal-carousel {
+      align-items: stretch;
+      contain: layout paint;
+      overflow-y: hidden;
+      overscroll-behavior-x: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+    .horizontal-carousel > * {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

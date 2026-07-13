@@ -55,12 +55,12 @@ export default function PlanEvent({ dict }: { dict: Dictionary }) {
           </p>
         </div>
 
-        <div className="no-scrollbar -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
+        <div className="horizontal-carousel no-scrollbar -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
           {dict.events.plan.cards.map((card, i) => (
             <motion.div
               key={card}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.07 }}
               className="group relative w-[80%] flex-none snap-center overflow-hidden rounded-2xl border border-white/10 bg-magma-black/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-magma-orange/60 hover:shadow-ember sm:w-auto sm:p-7"
