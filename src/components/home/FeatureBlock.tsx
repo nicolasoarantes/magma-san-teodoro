@@ -15,6 +15,7 @@ export default function FeatureBlock({
   ctaHref,
   reverse = false,
   fire = 0.7,
+  imagePosition = "center",
 }: {
   image: string;
   imageAlt: string;
@@ -25,6 +26,7 @@ export default function FeatureBlock({
   ctaHref?: string;
   reverse?: boolean;
   fire?: number;
+  imagePosition?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-magma-black py-12 sm:py-20">
@@ -58,6 +60,7 @@ export default function FeatureBlock({
               quality={90}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
+              style={{ objectPosition: imagePosition }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
           </motion.div>

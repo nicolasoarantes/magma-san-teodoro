@@ -11,13 +11,14 @@ export default function EventsHero({ dict }: { dict: Dictionary }) {
   return (
     <section className="relative flex min-h-[78svh] items-center justify-center overflow-hidden">
       <Image
-        src={magmaAssets.photos.latinDay}
-        alt="MAGMA Latin night"
+        src={magmaAssets.photos.fireGrillCloseup}
+        alt="Carne allo spiedo in cottura con fuoco alla griglia del MAGMA"
         fill
         priority
         quality={90}
         sizes="100vw"
         className="object-cover"
+        style={{ objectPosition: "center 58%" }}
       />
       <div className="absolute inset-0 heat-veil" />
       <div className="absolute inset-0 grain opacity-60" />

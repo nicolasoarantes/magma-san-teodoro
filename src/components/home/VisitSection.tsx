@@ -17,14 +17,15 @@ export default function VisitSection({ dict }: { dict: Dictionary }) {
   return (
     <section className="relative overflow-hidden py-16 sm:py-24">
       <Image
-        src={magmaAssets.photos.facade}
-        alt="MAGMA facade in San Teodoro at night"
+        src={magmaAssets.photos.rotisserieChicken}
+        alt="Pollo allo spiedo in cottura alla griglia del MAGMA"
         fill
         quality={92}
         sizes="100vw"
         className="scale-110 object-cover blur-[3px]"
+        style={{ objectPosition: "center 58%" }}
       />
-      <div className="absolute inset-0 bg-magma-black/55" />
+      <div className="absolute inset-0 bg-magma-black/65" />
       <div className="absolute inset-0 photo-veil" />
       <div className="grain absolute inset-0 opacity-30" />
       <div className="relative mx-auto max-w-3xl px-6 text-center">

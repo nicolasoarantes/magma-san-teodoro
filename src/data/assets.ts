@@ -35,6 +35,11 @@ export const magmaAssets = {
     churrasco: `${BASE}/fotos/churrasco-fire.jpg`,
     // High-res plated steak dinner — steakhouse / food feature.
     steak: `${BASE}/fotos/steak-dinner.jpg`,
+    skewerBeef: `${BASE}/fotos/magma-skewer-beef.jpg`,
+    rotisserieChicken: `${BASE}/fotos/magma-rotisserie-chicken.jpg`,
+    dessertPassionfruit: `${BASE}/fotos/magma-dessert-passionfruit.jpg`,
+    antipastoContorno: `${BASE}/fotos/magma-antipasto-contorno.jpg`,
+    fireGrillCloseup: `${BASE}/fotos/magma-fire-grill-closeup.jpg`,
     // "New opening" fire close-up.
     fire: `${BASE}/fotos/new-opening-fire.jpg`,
     // "Every day is a Latin day" — dancing silhouettes.

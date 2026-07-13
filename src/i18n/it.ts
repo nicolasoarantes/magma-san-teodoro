@@ -81,6 +81,11 @@ const it: Dictionary = {
       title: "Dalla cena alla pista.",
       copy: "Latin party, DJ set e notti brasiliane per tutta l'estate.",
     },
+    desserts: {
+      kicker: "Dolci",
+      title: "Finale Tropicale",
+      copy: "Dettagli dolci e freschi per chiudere l'esperienza MAGMA con colore brasiliano.",
+    },
     visit: {
       kicker: "Vieni a trovarci",
       title: "Ci trovi a San Teodoro",

@@ -19,14 +19,15 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       <ExperienceCards dict={dict} />
 
       <FeatureBlock
-        image={magmaAssets.photos.steak}
-        imageAlt="Steakhouse cut served at MAGMA in San Teodoro"
+        image={magmaAssets.photos.skewerBeef}
+        imageAlt="Grande spiedo di carne brasiliana davanti alla griglia del MAGMA"
         kicker={dict.home.food.kicker}
         title={dict.home.food.title}
         copy={dict.home.food.copy}
         ctaLabel={dict.common.exploreMenu}
         ctaHref={localizedPath(locale, "/menu")}
         fire={1.2}
+        imagePosition="58% center"
       />
 
       <FeatureBlock
@@ -48,6 +49,19 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         copy={dict.home.eventsTeaser.copy}
         ctaLabel={dict.common.exploreEvents}
         ctaHref={localizedPath(locale, "/events")}
+      />
+
+      <FeatureBlock
+        reverse
+        image={magmaAssets.photos.dessertPassionfruit}
+        imageAlt="Dessert al passion fruit servito al tavolo da MAGMA"
+        kicker={dict.home.desserts.kicker}
+        title={dict.home.desserts.title}
+        copy={dict.home.desserts.copy}
+        ctaLabel={dict.common.viewMenu}
+        ctaHref={localizedPath(locale, "/menu")}
+        imagePosition="center 45%"
+        fire={0.55}
       />
 
       <VisitSection dict={dict} />

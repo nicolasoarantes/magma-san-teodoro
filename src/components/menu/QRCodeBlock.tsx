@@ -8,7 +8,7 @@ export default function QRCodeBlock({ dict }: { dict: Dictionary }) {
   return (
     <div className="flex flex-col items-center text-center">
       <div className="rounded-2xl border border-white/10 bg-white p-3">
-        {/* QR points to the menu page (see README to regenerate for your domain). */}
+        {/* QR points to the public PDF menu. */}
         <Image
           src={magmaAssets.menu.qr}
           alt="QR code to the MAGMA menu"

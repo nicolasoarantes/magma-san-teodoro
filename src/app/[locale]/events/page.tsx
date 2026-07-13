@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { isLocale, defaultLocale, type Locale } from "@/lib/locale";
 import { getDictionary } from "@/i18n";
+import { magmaAssets } from "@/data/assets";
 import EventsHero from "@/components/events/EventsHero";
 import EventGallery from "@/components/events/EventGallery";
 import PlanEvent from "@/components/events/PlanEvent";
@@ -20,7 +21,7 @@ export function generateMetadata({
     openGraph: {
       title: dict.meta.eventsTitle,
       description: dict.meta.eventsDescription,
-      images: [{ url: "/assets/magma/fotos/event-latin-party.jpg" }],
+      images: [{ url: magmaAssets.photos.fireGrillCloseup }],
     },
   };
 }

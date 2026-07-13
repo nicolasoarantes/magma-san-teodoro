@@ -8,11 +8,12 @@ import EmberBackdrop from "@/components/ui/EmberBackdrop";
 
 export default function ExperienceCards({ dict }: { dict: Dictionary }) {
   const images = [
-    magmaAssets.photos.churrasco,
+    magmaAssets.photos.skewerBeef,
     magmaAssets.photos.drink,
     magmaAssets.photos.latinDay,
-    magmaAssets.photos.facade,
+    magmaAssets.photos.antipastoContorno,
   ];
+  const imagePositions = ["58% center", "center", "center", "center"];
   const cards = dict.home.experience.cards;
 
   return (
@@ -45,6 +46,7 @@ export default function ExperienceCards({ dict }: { dict: Dictionary }) {
                 quality={90}
                 sizes="(max-width: 640px) 100vw, 25vw"
                 className="object-cover transition duration-700 group-hover:scale-110"
+                style={{ objectPosition: imagePositions[i] }}
               />
               <div className="absolute inset-0 photo-veil" />
               <div className="absolute inset-x-0 bottom-0 p-5">

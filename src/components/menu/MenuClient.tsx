@@ -36,7 +36,7 @@ export default function MenuClient({
 
   return (
     <section className="bg-magma-black pb-20">
-      <div className="sticky top-16 z-30 border-b border-white/5 bg-magma-black/90 backdrop-blur-md">
+      <div className="sticky top-[var(--magma-header-offset,4rem)] z-30 border-b border-white/5 bg-magma-black/90 backdrop-blur-md transition-[top] duration-300">
         <div className="mx-auto max-w-4xl px-4 py-4 sm:px-6">
           <div className="relative mb-3">
             <input

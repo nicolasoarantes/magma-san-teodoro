@@ -9,7 +9,7 @@ import MagmaCanvasBackground from "@/components/ui/MagmaCanvasBackground";
 export default function MagmaPosterSection({ dict }: { dict: Dictionary }) {
   const tiles = [
     { src: magmaAssets.photos.drink, label: "DRINKS", span: "row-span-2" },
-    { src: magmaAssets.photos.churrasco, label: "FOOD", span: "" },
+    { src: magmaAssets.photos.fireGrillCloseup, label: "FOOD", span: "" },
     { src: magmaAssets.photos.latinDay, label: "MUSIC", span: "" },
     { src: magmaAssets.photos.aerial, label: "SAN TEODORO", span: "col-span-2" },
   ];

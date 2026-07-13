@@ -79,6 +79,11 @@ const en = {
       title: "From dinner to dancefloor.",
       copy: "Latin parties, DJ sets and Brazilian nights all summer long.",
     },
+    desserts: {
+      kicker: "Desserts",
+      title: "A Tropical Finish",
+      copy: "Sweet, fresh details that close the MAGMA experience with Brazilian colour.",
+    },
     visit: {
       kicker: "Visit us",
       title: "Find us in San Teodoro",

@@ -39,6 +39,16 @@ export default function Header({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--magma-header-offset",
+      hidden ? "0px" : "4rem",
+    );
+    return () => {
+      document.documentElement.style.removeProperty("--magma-header-offset");
+    };
+  }, [hidden]);
+
   const links = [
     { href: localizedPath(locale, "/"), label: dict.nav.home },
     { href: localizedPath(locale, "/events"), label: dict.nav.events },
