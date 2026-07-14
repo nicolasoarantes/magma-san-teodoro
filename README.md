@@ -26,7 +26,7 @@ Rotas: `/en`, `/en/events`, `/en/menu` (e `/it/...`, `/pt/...`). A raiz `/` redi
 Copie `.env.example` para `.env.local` e ajuste:
 
 ```
-NEXT_PUBLIC_WHATSAPP_NUMBER=393791551455          # WhatsApp (só dígitos, formato internacional)
+NEXT_PUBLIC_WHATSAPP_NUMBER=393401396582          # WhatsApp (só dígitos, formato internacional)
 NEXT_PUBLIC_SITE_URL=https://seu-dominio.vercel.app  # usado em SEO e no QR do menu
 NEXT_PUBLIC_INSTAGRAM_URL=                         # link do Instagram (vazio = aparece como TODO)
 NEXT_PUBLIC_MAPS_URL=                              # link do Google Maps (vazio = busca pelo endereço)

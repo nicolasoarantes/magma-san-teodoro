@@ -5,7 +5,7 @@ dúvida, deixamos um padrão seguro + marcação `TODO` no código.
 
 ## Confirmar / preencher
 
-- [ ] **WhatsApp** — hoje usa `+39 379 155 1455` (número dos posters de evento), configurável em `NEXT_PUBLIC_WHATSAPP_NUMBER`. O telefone do `Info.docx` é `+39 340 139 6582` (usado como telefone de contato no rodapé/visita). Confirmar qual número recebe mensagens no WhatsApp.
+- [x] **WhatsApp** — configurado para `+39 340 139 6582` via fallback em `src/lib/whatsapp.ts` e exemplo em `.env.example`. Em produção, confirme que `NEXT_PUBLIC_WHATSAPP_NUMBER=393401396582`.
 - [ ] **Endereço** — usamos `Via San Francesco d'Assisi 15, San Teodoro (SS)` (do `Info.docx`, o mais recorrente). O briefing chegou a citar o nº 7; mantido o 15. Confirmar.
 - [ ] **Instagram** — definir `NEXT_PUBLIC_INSTAGRAM_URL`. Enquanto vazio, aparece como “Instagram (adicione o link)” no rodapé.
 - [ ] **Google Maps** — definir `NEXT_PUBLIC_MAPS_URL` com o link real da ficha do Google. Sem isso, o botão abre uma busca pelo endereço.

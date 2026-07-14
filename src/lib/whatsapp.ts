@@ -1,6 +1,5 @@
 // WhatsApp helper. Number is configurable via NEXT_PUBLIC_WHATSAPP_NUMBER.
-// Falls back to the number that appears on the Magma event posters.
-const FALLBACK_NUMBER = "393791551455"; // +39 379 155 1455 (from event posters)
+const FALLBACK_NUMBER = "393401396582"; // +39 340 139 6582
 
 export function whatsappNumber(): string {
   const raw = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || FALLBACK_NUMBER;
