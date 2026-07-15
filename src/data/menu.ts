@@ -34,7 +34,7 @@ export const menuItems: MenuItem[] = [
     description:
       "L'esperienza più completa del nostro churrasco: dieci selezionati tagli di carne, cotti alla brace secondo la tradizione brasiliana e serviti direttamente al tavolo sulle tradizionali spade.",
     details: "10 Tagli",
-    price: 70,
+    price: 55,
     unit: "€/persona",
   },
   {
