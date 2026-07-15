@@ -1,11 +1,14 @@
 "use client";
 
 import type { Dictionary } from "@/i18n";
-import { magmaAssets } from "@/data/assets";
+import type { Locale } from "@/lib/locale";
+import { getLocalizedMenuAssets } from "@/data/assets";
 import EmberBackdrop from "@/components/ui/EmberBackdrop";
 import QRCodeBlock from "./QRCodeBlock";
 
-export default function DownloadMenuBlock({ dict }: { dict: Dictionary }) {
+export default function DownloadMenuBlock({ dict, locale }: { dict: Dictionary; locale: Locale }) {
+  const menuAssets = getLocalizedMenuAssets(locale);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0c0b09] to-magma-charcoal py-14">
       <EmberBackdrop variant="top" />
@@ -19,7 +22,7 @@ export default function DownloadMenuBlock({ dict }: { dict: Dictionary }) {
               {dict.menu.download.copy}
             </p>
             <a
-              href={magmaAssets.menu.pdf}
+              href={menuAssets.pdf}
               target="_blank"
               rel="noopener noreferrer"
               download
@@ -28,7 +31,7 @@ export default function DownloadMenuBlock({ dict }: { dict: Dictionary }) {
               {dict.menu.download.pdf}
             </a>
           </div>
-          <QRCodeBlock dict={dict} />
+          <QRCodeBlock dict={dict} qrSrc={menuAssets.qr} />
         </div>
       </div>
     </section>

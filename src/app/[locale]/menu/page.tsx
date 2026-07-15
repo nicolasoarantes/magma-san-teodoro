@@ -31,7 +31,7 @@ export default function MenuPage({ params }: { params: { locale: string } }) {
     <>
       <MenuHero dict={dict} />
       <MenuClient dict={dict} items={publicMenuItems} categories={menuCategories} locale={locale} />
-      <DownloadMenuBlock dict={dict} />
+      <DownloadMenuBlock dict={dict} locale={locale} />
     </>
   );
 }

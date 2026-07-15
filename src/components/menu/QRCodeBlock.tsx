@@ -2,15 +2,14 @@
 
 import Image from "next/image";
 import type { Dictionary } from "@/i18n";
-import { magmaAssets } from "@/data/assets";
 
-export default function QRCodeBlock({ dict }: { dict: Dictionary }) {
+export default function QRCodeBlock({ dict, qrSrc }: { dict: Dictionary; qrSrc: string }) {
   return (
     <div className="flex flex-col items-center text-center">
       <div className="rounded-2xl border border-white/10 bg-white p-3">
-        {/* QR points to the public PDF menu. */}
+        {/* QR points to the localized public PDF menu. */}
         <Image
-          src={magmaAssets.menu.qr}
+          src={qrSrc}
           alt="QR code to the MAGMA menu"
           width={150}
           height={150}

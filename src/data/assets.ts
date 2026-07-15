@@ -1,3 +1,5 @@
+import type { Locale } from "@/lib/locale";
+
 // Real Magma assets, organized under /public/assets/magma.
 // Source files came from /ativos (fotos + logos). If you swap a file,
 // keep the same path here or update the mapping below. See README.
@@ -66,6 +68,30 @@ export const magmaAssets = {
     qr: "/menu/qr-menu.png",
   },
 } as const;
+
+type MenuAsset = {
+  pdf: string;
+  qr: string;
+};
+
+export const localizedMenuAssets = {
+  en: {
+    pdf: "/menu/magma-menu-en.pdf",
+    qr: "/menu/qr-menu-en.png",
+  },
+  it: {
+    pdf: "/menu/magma-menu.pdf",
+    qr: "/menu/qr-menu.png",
+  },
+  pt: {
+    pdf: "/menu/magma-menu-en.pdf",
+    qr: "/menu/qr-menu-en.png",
+  },
+} as const satisfies Record<Locale, MenuAsset>;
+
+export function getLocalizedMenuAssets(locale: Locale): MenuAsset {
+  return localizedMenuAssets[locale];
+}
 
 // Curated photo strip for the home collage / carousel.
 export const galleryPhotos = [
