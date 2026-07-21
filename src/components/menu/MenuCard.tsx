@@ -15,7 +15,7 @@ export default function MenuCard({
   const showInlineDetails = details && details.length <= 24;
 
   return (
-    <div className="flex items-start justify-between gap-4 rounded-xl border border-white/10 bg-magma-charcoal/70 p-4 transition hover:border-magma-orange/40">
+    <div className="flex flex-col gap-3 rounded-xl border border-white/10 bg-magma-charcoal/70 p-4 transition hover:border-magma-orange/40 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
       <div className="min-w-0">
         <h4 className="font-heading text-base font-semibold uppercase tracking-wide text-magma-cream">
           {item.name}
@@ -37,7 +37,7 @@ export default function MenuCard({
         )}
       </div>
       {item.price !== null && (
-        <span className="shrink-0 whitespace-nowrap font-heading text-base font-semibold text-magma-orange">
+        <span className="self-start whitespace-nowrap font-heading text-base font-semibold text-magma-orange sm:shrink-0">
           {formatPrice(item)}
         </span>
       )}

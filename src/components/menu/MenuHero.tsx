@@ -17,7 +17,7 @@ export default function MenuHero({ dict }: { dict: Dictionary }) {
         >
           <span className="heat-text">{dict.menu.title}</span>
         </motion.h1>
-        <p className="mt-3 font-heading text-xs uppercase tracking-[0.3em] text-magma-cream/60 sm:text-sm">
+        <p className="mx-auto mt-3 max-w-xs text-balance font-heading text-xs uppercase leading-relaxed tracking-[0.22em] text-magma-cream/60 sm:max-w-none sm:text-sm sm:tracking-[0.3em]">
           {dict.menu.subtitle}
         </p>
         <SocialLinks className="mt-6" />
